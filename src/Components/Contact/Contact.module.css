@@ -1,0 +1,39 @@
+.stars {
+    position: relative;
+}
+
+.stars::before {
+    content: "";
+    position: absolute;
+    width: 75px;
+    height: 4px;
+    background-color: white;
+    left: calc(50% - 100px);
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.stars::after {
+    content: "";
+    position: absolute;
+    width: 75px;
+    height: 4px;
+    background-color: white;
+    right: calc(50% - 100px);
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+
+.labelStyle {
+    position: absolute;
+    left: 16px;
+    top: 100%;
+    opacity: 0;
+    transition: all .5s;
+}
+
+.goUp {
+    top: -16px;
+    opacity: 1;
+}

@@ -1,0 +1,6 @@
+.navbar-nav .nav-link.active,
+.navbar-nav .nav-link.show {
+    background-color: #000;
+    border-radius: 8px;
+    font-weight: 500;
+}

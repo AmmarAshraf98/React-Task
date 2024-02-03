@@ -1,0 +1,53 @@
+.cursorePointer {
+    cursor: pointer;
+}
+
+.item {
+    position: relative;
+}
+
+.item::before {
+    content: "\2b";
+    font-family: 'Font Awesome 5 Free';
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    font-size: 48px;
+    font-weight: bold;
+    inset: 0;
+    opacity: 0;
+    transition: all .5s;
+    background-color: #1abc9ce6;
+}
+
+
+.item:hover::before {
+    opacity: 1;
+}
+
+.stars {
+    position: relative;
+}
+
+.stars::before {
+    content: "";
+    position: absolute;
+    width: 75px;
+    height: 4px;
+    background-color: white;
+    left: calc(50% - 100px);
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.stars::after {
+    content: "";
+    position: absolute;
+    width: 75px;
+    height: 4px;
+    background-color: white;
+    right: calc(50% - 100px);
+    top: 50%;
+    transform: translateY(-50%);
+}
