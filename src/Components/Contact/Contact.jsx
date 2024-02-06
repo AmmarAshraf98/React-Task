@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import style from "./Contact.module.css";
 export default function Contact() {
-
+  // state
   const [isFocused, setIsFocused] = useState({
     name: false,
     age: false,
@@ -12,7 +12,6 @@ export default function Contact() {
   // set label to be show
   const handleFocus = (e) => {
     setIsFocused({ ...isFocused, [e.target.name]: true });
-    console.log(isFocused);
   };
 
   // set label to be hide
@@ -20,7 +19,6 @@ export default function Contact() {
     setIsFocused({ ...isFocused, [e.target.name]: false });
   };
 
-  
   return (
     <>
       <h2 className="text-center fw-bold mb-4">CONTACT SECTION</h2>

@@ -1,19 +1,11 @@
-import { Link } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import "./Navbar.css";
 
 export default function Navbar() {
-  const setActive = (e) => {
-    const x = document.querySelectorAll(".nav-link");
-    for (const ele of x) {
-      ele.classList.remove("active");
-    }
-    e.target.classList.add("active");
-  };
-
   return (
     <nav className="navbar navbar-expand-lg bg-dark navbar-dark ">
       <div className="container-fluid">
-        <Link className="navbar-brand" onClick={setActive} to={""}>
+        <Link className="navbar-brand" to={""}>
           <h1>FrameWork</h1>
         </Link>
         <button
@@ -30,19 +22,19 @@ export default function Navbar() {
         <div className="collapse navbar-collapse" id="navbarSupportedContent">
           <ul className="navbar-nav ms-auto mb-2 mb-lg-0">
             <li className="nav-item">
-              <Link className="nav-link" onClick={setActive} to={"about"}>
+              <NavLink className="nav-link" to={"about"}>
                 About
-              </Link>
+              </NavLink>
             </li>
             <li className="nav-item">
-              <Link className="nav-link" onClick={setActive} to={"profile"}>
+              <NavLink className="nav-link" to={"profile"}>
                 Profile
-              </Link>
+              </NavLink>
             </li>
             <li className="nav-item">
-              <Link className="nav-link" onClick={setActive} to={"contact"}>
+              <NavLink className="nav-link" to={"contact"}>
                 Contact
-              </Link>
+              </NavLink>
             </li>
           </ul>
         </div>

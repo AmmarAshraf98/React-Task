@@ -5,6 +5,7 @@ import Home from "./Components/Home/Home";
 import About from "./Components/About/About";
 import Profile from "./Components/Profile/Profile";
 import Contact from "./Components/Contact/Contact";
+import NotFound from "./Components/NotFound/NotFound";
 
 function App() {
   let routes = createBrowserRouter([
@@ -16,6 +17,7 @@ function App() {
         { path: "about", element: <About /> },
         { path: "profile", element: <Profile /> },
         { path: "contact", element: <Contact /> },
+        { path: "*", element: <NotFound /> },
       ],
     },
   ]);
